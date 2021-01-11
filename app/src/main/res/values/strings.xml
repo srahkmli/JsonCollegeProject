@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">jsonTry</string>
+    <string name="enter_message_name">Your Name</string>
+    <string name="enter_message_family">Your family</string>
+    <string name="enter_message_add">Your address</string>
+    <string name="enter_message_fav">Your Fav</string>
+    <string name="enter_message_mobile">Your Mobile No</string>
+    <string name="enter_message_Email">Your Email add</string>
+    <string name="enter_message_password">Your Password</string>
+    <string name="enter_message_City">Your city</string>
+    <string name="reg">Register</string>
+    <string name="shrddb">Login via shared DB</string>
+    <string name="frag">Show info via frag</string>
+    <string name="nemodar">show nemodar</string>
+    <string name="entertainment">entertainment</string>
+    <string name="radioBtnM">Male</string>
+    <string name="radioBtnF">Female</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="item1"> Leprous - Below</string>
+    <string name="item2"> Katatonia - Old Heart Falls</string>
+    <string name="item3"> ShamRain - Evangeline</string>
+    <string name="item4">And I Love Her</string>
+
+
+    <integer-array name="paths">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </integer-array>
+
+    <string-array name="names">
+        <item>@string/item1</item>
+        <item>@string/item2</item>
+        <item>@string/item3</item>
+        <item>@string/item4</item>
+    </string-array>
+
+
+    <string-array name="city_array">
+        <item>tehran</item>
+        <item>mashhad</item>
+        <item>Esfahan</item>
+        <item>shiraz</item>
+        <item>Qom</item>
+        <item>Khozestan</item>
+        <item>Boshehr</item>
+        <item>Ardebil</item>
+    </string-array>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".sturegister">
+
+
+    <!--  family Label -->
+
+    <EditText
+        android:id="@+id/input_family"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_message_family"
+        android:layout_below="@+id/input_name"
+        android:inputType="text" />
+
+
+    <!--  Address Label -->
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/input_fav">
+
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioBtnF" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioBtnM" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/input_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/enter_message_add"
+        android:layout_below="@id/radioGender"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/input_number"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_message_mobile"
+        android:layout_below="@id/Citylist" />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_message_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/input_fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/input_family"
+        android:hint="@string/enter_message_fav"
+        android:inputType="textEmailAddress"/>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/input_number"
+            android:text="@string/reg"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/enter_message_City"
+        android:id="@+id/textvlist"
+        android:layout_below="@id/input_address"/>
+    <Spinner
+        android:id="@+id/Citylist"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textvlist"
+        />
+</RelativeLayout>

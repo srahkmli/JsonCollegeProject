@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="50dp"
+    android:layout_marginRight="30dp"
+    tools:context=".MainActivity">
+
+    <ImageButton
+
+        android:id="@+id/btn3"
+        android:src="@drawable/img2"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:tooltipText="@string/frag"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/MainReg_Btn"
+        />
+
+    <ImageButton
+        android:id="@+id/MainReg_Btn"
+        android:tooltipText="@string/reg"
+        android:src="@drawable/img1"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="MainRegister_Btn" />
+
+    <ImageButton
+        android:id="@+id/ShowInfo_Btn"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:tooltipText="@string/shrddb"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/btn4"
+        android:onClick="MainLogin_Btn"
+        android:src="@drawable/img3" />
+
+    <ImageButton
+        android:id="@+id/btn4"
+        android:onClick="BtnEntertainment"
+        android:src="@drawable/img4"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:tooltipText="@string/entertainment"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="30dp" />
+
+    <ImageButton
+        android:id="@+id/btn5"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="380dp"
+        android:tooltipText="@string/nemodar"
+        android:onClick="Graph"
+        android:layout_toRightOf="@+id/btnsms"
+        android:src="@drawable/img5" />
+
+    <ImageButton
+        android:id="@+id/btnsms"
+        android:src="@drawable/img6"
+        android:onClick="sendSms"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="30dp" />
+</RelativeLayout>
