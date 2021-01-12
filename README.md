@@ -5,4 +5,5 @@ And after login you come up with a Imageviews that with click on each you'll be 
 Also this Progect will fetch data via Json from URLs and you'll see your Info in FragmentList
 
 it's College stuff and my desire for this project was poor
+
 hope you enjoy<3
