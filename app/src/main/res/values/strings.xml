@@ -9,6 +9,7 @@
     <string name="enter_message_password">Your Password</string>
     <string name="enter_message_City">Your city</string>
     <string name="reg">Register</string>
+    <string name="showdata">View</string>
     <string name="shrddb">Login via shared DB</string>
     <string name="frag">Show info via frag</string>
     <string name="nemodar">show nemodar</string>

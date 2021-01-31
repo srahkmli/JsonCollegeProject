@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     compile 'com.jjoe64:graphview:4.2.2'
 
     implementation fileTree(dir: "libs", include: ["*.jar"])

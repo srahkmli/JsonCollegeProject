@@ -89,6 +89,15 @@
             android:text="@string/reg"
             />
 
+    <Button
+        android:id="@+id/btnviewdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/buttonRegister"
+        android:text="@string/showdata"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

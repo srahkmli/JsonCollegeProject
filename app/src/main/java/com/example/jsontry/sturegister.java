@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -32,11 +34,11 @@ public class sturegister extends AppCompatActivity {
     String city , gender;
     EditText name , family , fav , address ,number;
     RadioButton female , male;
-    Button btnReg;
+    Button btnReg , btnview;
     DBHelper db;
     Spinner Citylist;
     List<String> cities = new ArrayList<>();
-
+    Animation animZoomIn,animZoomOut,animRotate,animBounce;
     public static final int PERMISSION_REQUEST_CODE=123;
     @SuppressLint("WrongViewCast")
     @Override
@@ -53,11 +55,23 @@ public class sturegister extends AppCompatActivity {
         Citylist = findViewById(R.id.Citylist);
         number = findViewById(R.id.input_number);
         btnReg = findViewById(R.id.buttonRegister);
+        btnview = findViewById(R.id.btnviewdata);
         db = new DBHelper(this);
+        animRotate = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.rotate);
+        animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.zoom_in);
+        animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.zoom_out);
+        animBounce = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bounce);
 
-         btnReg.setOnClickListener(new View.OnClickListener() {
+
+        btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnReg.setVisibility(View.VISIBLE);
+                btnReg.startAnimation(animZoomOut);
                 if (female.isChecked()) {
                     gender = female.getText().toString();
                 } else if (male.isChecked()) {
@@ -80,6 +94,32 @@ public class sturegister extends AppCompatActivity {
                 sendSms();
             }
         });
+         btnview.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 btnview.setVisibility(View.VISIBLE);
+                 btnview.startAnimation(animBounce);
+                 Cursor res = db.getdata();
+                 if (res.getCount() == 0) {
+                     Toast.makeText(sturegister.this, "No Entry", Toast.LENGTH_SHORT).show();
+                     return;
+                 }
+                 StringBuffer buffer = new StringBuffer();
+                 while (res.moveToNext()) {
+                     buffer.append("Name : "+res.getString(0) + "\n");
+                     buffer.append("family : "+res.getString(1) + "\n");
+                     buffer.append("Number : "+res.getString(6) + "\n");
+                     buffer.append("gender : "+res.getString(3) + "\n");
+                     buffer.append("City : "+res.getString(5) + "\n\n");
+                 }
+
+                 AlertDialog.Builder builder = new AlertDialog.Builder(sturegister.this);
+                 builder.setCancelable(true);
+                 builder.setTitle("Student");
+                 builder.setMessage(buffer.toString());
+                 builder.show();
+             }
+         });
 
         cities.add("اصفهان");
         cities.add("شیراز");
@@ -127,6 +167,7 @@ public class sturegister extends AppCompatActivity {
                         Manifest.permission.RECEIVE_SMS,
                         Manifest.permission.SEND_SMS},PERMISSION_REQUEST_CODE);
             } } }
+
 
 
     @Override
